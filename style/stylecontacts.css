@@ -1,0 +1,280 @@
+/* CSS VARIABLES */
+:root{
+	--primary:#ddd;
+	--dark:#333;
+	--light:#fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);	
+}
+
+
+/* STRUCTURE DE BASE (pour les 2 pages) */
+html{
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--dark);
+}
+
+body{
+    background: #F8F5F0;
+	margin: 30px 50px;
+	line-height: 1.4;
+}
+
+.btn{
+	background: var(--dark);
+	color: var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+}
+
+img{
+	max-width: 100%; /* = image stays within their container */
+}
+
+.wrapper{
+	display: grid;
+	grid-gap: 20px;
+}
+
+/* PAGE TITLE (pour les 2 pages) */
+.main-title{
+	margin-top: 0;
+	color: var(--dark);
+	text-align: center;
+	padding: 1rem;
+}
+
+/* NAVIGATION (pour les 2 pages) */
+.navbar{
+    color:#333;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}  
+
+.navbar a{
+    color: #333;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.navbar a:hover{
+    border-bottom:3px #333 solid;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+.container{
+    /*max-width: 1100px;*/
+    margin:0 auto;
+    padding: 0 40px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.navbar .active{
+	border-bottom: 3px #333 solid;
+	color: #333;
+	font-weight: 600;
+}
+
+
+/* SECTION CONTACTS */
+
+/* Partie de gauche */
+.contact{
+	box-shadow: var(--shadow);
+	position: relative;
+    width: 100%;
+    margin-top: 50px;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: flex-start;
+}
+
+.contact-form{
+	position: relative;
+	width: calc(100% - 400px);
+	padding: 60px 40px 20px;
+}
+
+.contact-form form{
+	width: 100%;
+}
+
+
+.contact-form .row{
+	width: 100%;
+	display: flex;
+}
+ 	
+.contact-form .input50{
+	width: 50%;
+	margin: 0 20px;
+}
+
+.contact-form .input100{
+	width: 100%;
+	margin: 0 20px;
+}
+
+.contact-form .row input,
+.contact-form .row textarea{
+	position: relative;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	color: #111;
+	background: transparent;
+	width: 100%;
+	padding: 12px;
+	outline: none;
+	font-size: 16px;
+	font-weight: 300;
+	margin: 20px 0;
+	resize: none;
+}
+
+.contact-form .row textarea{
+	height: 150px;
+}
+
+.contact-form .row input[type='submit']{
+	background: var(--dark);
+	color: var(--light);
+	padding: 0.8rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+	margin-top: 10px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	width: 103%;
+	text-align: center;
+}
+
+/* Partie de droite */
+
+.social{
+	width: 350px;
+	padding: 60px 40px 20px;
+}
+
+.social info-box{
+	display: flex;
+	align-items: flex-start;
+}
+
+.social .info-box .details h4{
+	background: #333;
+	padding: 10px;
+	color: var(--light);
+	text-align: center;
+	margin-bottom: 50px;
+	font-weight: 100;
+	border: 1px #333 solid;
+}
+
+.social .info-box .details h4:hover{
+	background: transparent;
+	padding: 10px;
+	color: #333;
+	text-align: center;
+	margin-bottom: 50px;
+	border: 1px #333 solid;
+}
+
+.social .info-box .details a{
+	text-decoration: none;
+}
+
+
+/* FOOTER (pour les 2 pages)*/
+footer{
+	margin-top: 2rem;
+	background: var(--dark);
+	color: var(--light);
+	text-align: center;
+	padding: 1rem;
+}
+
+.title-text{
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+/* effective for 700px or less */ 
+@media(max-width: 700px){
+	.navbar{
+        height:110px;
+    }
+        
+    .navbar .flex{
+        flex-direction: column;
+    }  
+        
+    .navbar ul{
+        padding: 10px;        
+    } 
+
+	.contact{
+		flex-direction: column;
+	}
+
+	.contact-form{
+		width: 100%;
+		padding: 30px 30px 20px;
+	}
+
+	.contact-form .row{
+		flex-direction: column;
+	}
+
+	.contact-form .input50,
+	.contact-form .input100{
+		width: 85%;
+		margin: 0;
+	}
+
+	.social{
+		width: 300px;
+		margin: 0 auto;
+		padding: 30px 30px 20px;
+	}
+}/* end of "effective for 700px or less" */ 
+
+	
+/* effective for 500px or less */ 
+@media(max-width: 500px){
+	.navbar{
+        height:110px;
+    }
+        
+    .navbar .flex{
+        flex-direction: column;
+    }  
+        
+    .navbar ul{
+        padding: 10px;        
+    }    
+}/* end of "effective for 500px or less" */ 

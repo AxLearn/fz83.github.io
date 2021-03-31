@@ -1,0 +1,407 @@
+/* CSS VARIABLES */
+:root{
+	--primary:#ddd;
+	--dark:#333;
+	--light:#fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);	
+}
+
+
+/* STRUCTURE DE BASE (pour les 2 pages) */
+html{
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--dark);
+}
+
+body{
+    background: #F8F5F0;
+	margin: 30px 50px;
+	line-height: 1.4;
+}
+
+.btn{
+	background: var(--dark);
+	color: var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+}
+
+img{
+	max-width: 100%; /* = image stays within their container */
+}
+
+.wrapper{
+	display: grid;
+	grid-gap: 20px;
+}
+
+/* PAGE TITLE (pour les 2 pages) */
+.main-title{
+	margin-top: 2rem;
+	color: var(--dark);
+	text-align: center;
+	padding: 1rem;
+}
+
+/* NAVIGATION (pour les 2 pages) */
+.navbar{
+    color:#333;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}  
+
+.navbar a{
+    color: #333;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.navbar a:hover{
+    border-bottom:3px #333 solid;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+.container{
+    /*max-width: 1100px;*/
+    margin:0 auto;
+    padding: 0 40px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.navbar .active{
+	border-bottom: 3px #333 solid;
+	color: #333;
+	font-weight: 600;
+}
+
+
+/* SECTION INFO */
+.info{
+	min-height: 400px;
+	box-shadow: var(--shadow);
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 3rem;
+}
+
+.histoire{
+	background: url(../images/cupcakes.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+
+.histoire h1{
+	font-size: 3rem;
+	margin-bottom: 0;
+	color: var(--light);
+}
+
+.histoire p{
+	font-size: 1.1rem;
+	margin-top: 0;
+	color: var(--light);
+}
+
+.info h3{
+	padding-top: 40px;
+}
+
+input[type=search]{
+	color:#f7ecb5;
+	/*border:none;*/	
+	/*position: relative;*/
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	color: #111;
+	background: transparent;
+	width: 100%;
+	padding: 12px;
+	outline: none;
+	font-size: 16px;
+	font-weight: 300;
+	resize: none;
+}	
+
+form {
+	width: 100%;
+}
+
+input[type=submit]{
+	background: var(--dark);
+	color: var(--light);
+	padding: 0.8rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+	margin-top: 10px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+/* SECTION COMMUNE RECETTES + EVENEMENTS */
+.boxes{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box{
+	background: var(--primary);
+	text-align: center;
+	padding: 1.5rem 2rem;
+	box-shadow: var(--shadow);
+}
+
+/************* piments */
+.piments{
+	background: url(../images/piments.jpeg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+
+.piments h4{
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	color: var(--light);
+}
+
+.piments p{
+	font-size: 1.1rem;
+	margin-top: 0;
+	color: var(--light);
+}
+
+/************* galettes */
+.galettes{
+	background: url(../images/galettes.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+
+.galettes h4{
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	color: var(--light);
+}
+
+.galettes p{
+	font-size: 1.1rem;
+	margin-top: 0;
+	color: var(--light);
+}
+
+/************* framboisettes */
+.framboisettes{
+	background: url(../images/framboise.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+
+.framboisettes h4{
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	color: var(--light);
+}
+
+.framboisettes p{
+	font-size: 1.1rem;
+	margin-top: 0;
+	color: var(--light);
+}
+
+/************* taboulé */
+.taboule{
+	background: url(../images/taboule.jpeg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+
+.taboule h4{
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	color: var(--light);
+}
+
+.taboule p{
+	font-size: 1.1rem;
+	margin-top: 0;
+	color: var(--light);
+}
+
+/**************/
+.voir-plus{
+	margin: 15px auto;
+}
+
+.recettes .box a{
+	text-decoration: none;
+	color: var(--light);
+	background: var(--dark);
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 5px;
+	letter-spacing: 0.5px;
+}
+
+.recettes .box a:hover{
+	color: var(--dark);
+	background: var(--light);
+}
+
+.recettes .box p{
+	background: var(--dark);
+	opacity: 70%;
+}
+
+
+/* SECTION EVENEMENTS */
+.box .prix{
+	font-size: 2em;
+	font-weight: 400;
+}
+
+.events .box{
+	border: 2px #333 solid;
+	background: transparent;
+}
+
+
+/* SECTION INSTAGRAM */
+.instagram{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.instagram img{
+	width: 100%;
+	height: 100%;
+	box-shadow : var(--shadow);
+}
+
+/* SOURCE DES IMAGES */
+.source .source-details a{
+	text-decoration: none;
+	color: var(--dark);
+}
+
+.source .source-details a:hover{
+	text-decoration: underline;
+}
+
+
+/* FOOTER (pour les 2 pages)*/
+footer{
+	margin-top: 2rem;
+	background: var(--dark);
+	color: var(--light);
+	text-align: center;
+	padding: 1rem;
+}
+
+footer a{
+	text-decoration: none;
+	color: var(--light);
+	font-size: 13px;
+
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+/* effective for 700px or less */ 
+@media(max-width: 700px){
+	.navbar{
+        height:110px;
+    }
+        
+    .navbar .flex{
+        flex-direction: column;
+    }  
+        
+    .navbar ul{
+        padding: 10px;        
+    } 
+
+	.info{
+		grid-template-columns: 1fr;
+	}
+
+	.info .btn{
+		display: block;
+		text-align: center;
+		margin: auto;
+	}
+}/* end of "effective for 700px or less" */ 
+
+	
+/* effective for 500px or less */ 
+@media(max-width: 500px){        
+    .navbar{
+        height:110px;
+    }
+        
+    .navbar .flex{
+        flex-direction: column;
+    }  
+        
+    .navbar ul{
+        padding: 10px;        
+    }    
+}/* end of "effective for 500px or less" */ 
